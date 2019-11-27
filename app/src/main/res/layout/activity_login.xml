@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreen"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="301dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Login now!"
+        android:textAlignment="gravity"
+        android:textAllCaps="false"
+        android:textColor="@color/colorBlueHolo"
+        android:textIsSelectable="false"
+        android:textSize="50dp" />
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:color/white"
+        android:hint="Email"
+        android:singleLine="true"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/white"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        android:textIsSelectable="false" />
+
+    <Button
+        android:id="@+id/RegisterBoutton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorBlueHolo"
+        android:soundEffectsEnabled="true"
+        android:text="Login Now!"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/PasswordForgotten"
+        android:text="did you forgot your password?"
+        android:textColor="@color/colorRed"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:color/transparent"/>
+
+
+
+</LinearLayout>

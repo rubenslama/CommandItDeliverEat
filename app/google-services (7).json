@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1094387395697",
+    "firebase_url": "https://command-it-deliver-eat-a4e3e.firebaseio.com",
+    "project_id": "command-it-deliver-eat-a4e3e",
+    "storage_bucket": "command-it-deliver-eat-a4e3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094387395697:android:0762ab59f6c02363ee7fd0",
+        "android_client_info": {
+          "package_name": "com.example.commanditdelivereat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094387395697-a2d3n20fdtdoecgdbnggaepf2f03ii22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBR5FATGEmBA-QMJnuh_1x28sMqeySqsmQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094387395697-a2d3n20fdtdoecgdbnggaepf2f03ii22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -17,7 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
-    EditText mEmail,mPassword;
+    EditText mEmail, mPassword;
     Button mLoginButton, mForgottenPassword;
     FirebaseAuth fAuth;
 
@@ -26,47 +26,46 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        mEmail=findViewById(R.id.Email);
-        mPassword=findViewById(R.id.Password);
-        mLoginButton=findViewById(R.id.LoginButton);
-        mForgottenPassword=findViewById(R.id.PasswordForgotten);
-        fAuth= FirebaseAuth.getInstance();
-
-       mLoginButton.setOnClickListener(new View.OnClickListener() {
-
-           @Override
-           public void onClick(View v) {
-               String email= mEmail.getText().toString().trim();
-               String password=mPassword.getText().toString().trim();
-               if (TextUtils.isEmpty(email)){
-                   mEmail.setError("email is required.");
-                   return;
-               }
-               if (TextUtils.isEmpty(password)){
-                   mPassword.setError("password is empty");
-                   return;
-               }
-               if (password.length()<6){
-                   mPassword.setError("Password is weak.it's must be must than 6 characters");
-                   return;
-               }
+        mEmail = findViewById(R.id.Email);
+        mPassword = findViewById(R.id.Password);
+        mLoginButton = findViewById(R.id.LoginButton);
+        mForgottenPassword = findViewById(R.id.PasswordForgotten);
+        fAuth = FirebaseAuth.getInstance();
 
 
-               fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                   @Override
-                   public void onComplete(@NonNull Task<AuthResult> task) {
-                       if (task.isSuccessful()){
-                           Toast.makeText(LoginActivity.this,"User successfully created",Toast.LENGTH_SHORT).show();
-                           startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-                       }
-                       else {
-                           Toast.makeText(LoginActivity.this,"Error"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                       }
-                       }
+        mLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email= mEmail.getText().toString().trim();
+                String password=mPassword.getText().toString().trim();
+                if (TextUtils.isEmpty(email)){
+                    mEmail.setError("email is required.");
+                    return;
+                }
+                if (TextUtils.isEmpty(password)){
+                    mPassword.setError("password is empty");
+                    return;
+                }
+                if (password.length()<6){
+                    mPassword.setError("Password is weak.it's must be must than 6 characters");
+                    return;
+                }
+                fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(LoginActivity.this,"User successfully logged",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),MapPermissionAndLogout.class));
+                        }else{
+                            Toast.makeText(LoginActivity.this,"User doesn't exist"+task.getException(), Toast.LENGTH_SHORT).show();
+                        }
 
-               });
-           }
-       });
+                    }
+                });
 
+            }
+        });
     }
 }
+
+

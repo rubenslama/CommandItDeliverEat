@@ -78,12 +78,12 @@ public class register_form extends AppCompatActivity {
             }
         });
 
-            mLoginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-            }
-           });
+          mLoginButton.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                  startActivity(new Intent(getApplicationContext(),register_form.class));
+              }
+          });
 
     }
 }

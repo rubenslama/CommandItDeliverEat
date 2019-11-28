@@ -9,7 +9,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -69,7 +68,7 @@ public class register_form extends AppCompatActivity {
                             Toast.makeText(register_form.this,"User successfully created",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(),MapPermissionAndLogout.class));
                         }else {
-                            Toast.makeText(register_form.this,"Error"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(register_form.this,"Error"+task.getException(), Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -81,7 +80,7 @@ public class register_form extends AppCompatActivity {
           mLoginButton.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View v) {
-                  startActivity(new Intent(getApplicationContext(),register_form.class));
+                  startActivity(new Intent(getApplicationContext(),LoginActivity.class));
               }
           });
 

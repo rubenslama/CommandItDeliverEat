@@ -54,7 +54,11 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@android:color/transparent"/>
-
-
-
+    <Button
+        android:id="@+id/RedirecttoRegis"
+        android:text="Stil not member? "
+        android:textColor="@color/colorBlueHolo"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:color/transparent"/>
 </LinearLayout>
